@@ -5,6 +5,6 @@ module.exports = function (app) {
         res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
         next();
     });
-    app.get('/api/search/:product', products.findAll);
+    app.get('/api/search/:product/:pageNumber/:lazyLoadCount', products.findAll);
 
 }
