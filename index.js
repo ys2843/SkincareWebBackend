@@ -29,4 +29,4 @@ app.get('/', function (req, res) {
 
 require('./app/routes/products.routes.js')(app);
 
-app.listen(3001)
+app.listen(3000)
