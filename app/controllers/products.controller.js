@@ -18,7 +18,7 @@ exports.findAll = function (req, res) {
             if (!product) {
                 return res.status(404).send({message: "Note not found with " + req.param.product});
             }
-            res.send(product)
+            res.json(product)
         })
 }
 
