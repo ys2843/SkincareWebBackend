@@ -6,5 +6,5 @@ module.exports = function (app) {
         next();
     });
     app.get('/api/search/:product/:pageNumber/:lazyLoadCount', products.findAll);
-
+    app.get('/api/search/:product/count', products.findCount);
 }
