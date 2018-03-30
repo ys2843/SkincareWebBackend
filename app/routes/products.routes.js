@@ -6,6 +6,6 @@ module.exports = function (app) {
         res.header('Access-Control-Expose-Headers', 'Content-Length');
         next();
     });
-    app.get('/api/search/:product/:pageNumber/:lazyLoadCount', products.findAll);
+    app.get('/api/search/:product/:pageNumber', products.findAll);
     app.get('/api/search/:product/count', products.findCount);
 }
