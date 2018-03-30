@@ -9,7 +9,7 @@ const productSchema = mongoose.Schema({
     detail: Array,
     love_count: Number,
     unsafe_ingredients: Array,
-    price: Number,
+    price: String,
     is_safe: Boolean,
     brand: String,
     name: String
