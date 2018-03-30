@@ -7,5 +7,5 @@ module.exports = function (app) {
         next();
     });
     app.get('/api/search/:product/:pageNumber', products.findAll);
-    app.get('/api/search/:product/count', products.findCount);
+    app.get('/api/:product/count', products.findCount);
 }
