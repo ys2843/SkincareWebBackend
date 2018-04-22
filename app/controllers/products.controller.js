@@ -22,7 +22,6 @@ exports.findAll = function (req, res) {
         })
 }
 
-
 exports.findCount = function (req, res) {
 
     var re = new RegExp(req.params.product, "i")

@@ -15,4 +15,5 @@ const productSchema = mongoose.Schema({
     name: String
 })
 
+
 module.exports = mongoose.model('product', productSchema, 'sephora');
