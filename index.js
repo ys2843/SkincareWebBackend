@@ -23,9 +23,6 @@ mongoose.connection.on('error', function () {
 mongoose.connection.once('open', function () {
     console.log("Successfully connected to the database");
 })
-app.get('/', function (req, res) {
-    res.json({"message": "Welcome to EasyNotes application. Take notes quickly. Organize and keep track of all your notes."});
-});
 
 require('./app/routes/products.routes.js')(app);
 

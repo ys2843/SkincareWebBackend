@@ -1,10 +1,10 @@
 const product = require('../model/products.model');
 
 exports.findAll = function (req, res) {
-    var pageNumber = req.params.pageNumber;
-    const nPerPage = 60;
-    var re = new RegExp(req.params.product, "i")
-    var pro = {
+    const pageNumber = req.params.pageNumber;
+    const nPerPage = req.params.nPerPage;
+    const re = new RegExp(req.params.product, "i")
+    const pro = {
         "$or": [{'name': re}, {'brand': re}]
     };
     product.find(pro)
@@ -24,8 +24,8 @@ exports.findAll = function (req, res) {
 
 exports.findCount = function (req, res) {
 
-    var re = new RegExp(req.params.product, "i")
-    var pro = {
+    const re = new RegExp(req.params.product, "i")
+    const pro = {
         "$or": [{'name': re}, {'brand': re}]
     };
     product.count(pro, function (err, c) {
