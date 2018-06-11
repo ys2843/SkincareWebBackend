@@ -6,7 +6,7 @@ module.exports = function (app) {
         res.header('Access-Control-Expose-Headers', 'Content-Length');
         next();
     });
-    app.get('/api/search/:product/:pageNumber:/nPerPage', products.findAll);
+    app.get('/api/search/:product/:pageNumber/:nPerPage', products.findAll);
     app.get('/api/:product/count', products.findCount);
 
 }
