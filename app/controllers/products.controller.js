@@ -2,8 +2,9 @@ const product = require('../model/products.model');
 
 exports.findAll = function (req, res) {
     const pageNumber = req.params.pageNumber;
-    const nPerPage = req.params.nPerPage;
+    const nPerPage = parseInt(req.params.nPerPage);
     const re = new RegExp(req.params.product, "i")
+    console.log(nPerPage);
     const pro = {
         "$or": [{'name': re}, {'brand': re}]
     };
@@ -29,7 +30,6 @@ exports.findCount = function (req, res) {
         "$or": [{'name': re}, {'brand': re}]
     };
     product.count(pro, function (err, c) {
-        console.log(c)
         res.send({count: c})
     })
 }
